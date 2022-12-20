@@ -20,4 +20,3 @@ export var single = [
     value: 22,
   },
 ];
-

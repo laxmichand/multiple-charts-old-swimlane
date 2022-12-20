@@ -31,7 +31,7 @@
 .ngx-charts .card:hover {
   opacity: 0.8;
   -webkit-transition: opacity 100ms ease-in-out !important;
-  transition: opacity 100ms ease-in-out !important;
-  animation: mymove 5s infinite !important;
-  animation-timing-function: linear !important;
+  /* transition: opacity 100ms ease-in-out !important;   */
+  transform: scale(1.1) !important;
+  transition: transform 0.2s !important;
 }

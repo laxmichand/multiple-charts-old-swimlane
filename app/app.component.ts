@@ -27,6 +27,7 @@ export class AppComponent {
   };
 
   constructor() {
+    this.getCalculate();
     Object.assign(this, { single });
   }
 
@@ -37,12 +38,30 @@ export class AppComponent {
   onActivate(data): void {
     console.log('Activate', JSON.parse(JSON.stringify(data)));
     this.name = JSON.parse(JSON.stringify(data)).value.name;
-    this.value = JSON.parse(JSON.stringify(data)).value.value;
+    let temp = JSON.parse(JSON.stringify(data)).value.value;
+    this.value = ((Number(this.value) * temp) / 100).toString() + `%`;
   }
 
   onDeactivate(data): void {
     this.name = 'Total Incidents';
     this.value = '107';
     console.log('Deactivate', JSON.parse(JSON.stringify(data)));
+  }
+
+  getCalculate() {
+    const initialValue = 0;
+    this.value = single
+      .map((s) => {
+        return s.value;
+      })
+      .reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        initialValue
+      )
+      .toString();
+    let t = single.map((s) => {
+      return { ...s, value: (s.value * Number(this.value)) / 100 };
+    });
+    console.log('t is', t);
   }
 }
