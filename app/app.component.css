@@ -1,0 +1,37 @@
+.div-class {
+  position: absolute;
+  left: 146px;
+  top: 251px;
+}
+.icon-fire {
+  height: 34px;
+  width: 50px;
+  position: absolute;
+  top: -85px;
+}
+.label-name {
+  top: -40px;
+  position: absolute;
+  left: -25px;
+  width: max-content;
+}
+.label-value {
+  top: -13px;
+  position: absolute;
+  left: 14px;
+  width: max-content;
+}
+::ng-deep .ngx-charts .bar.active,
+.ngx-charts .bar:hover,
+.ngx-charts .cell.active,
+.ngx-charts .cell:hover,
+.ngx-charts .arc.active,
+.ngx-charts .arc:hover,
+.ngx-charts .card.active,
+.ngx-charts .card:hover {
+  opacity: 0.8;
+  -webkit-transition: opacity 100ms ease-in-out !important;
+  transition: opacity 100ms ease-in-out !important;
+  animation: mymove 5s infinite !important;
+  animation-timing-function: linear !important;
+}
