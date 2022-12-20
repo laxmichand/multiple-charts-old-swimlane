@@ -60,8 +60,7 @@ export class AppComponent {
       )
       .toString();
     let t = single.map((s) => {
-      return { ...s, value: (s.value * Number(this.value)) / 100 };
+      return { ...s, value: Math.round(s.value * Number(this.value)) / 100 };
     });
-    console.log('t is', t);
   }
 }
