@@ -33,8 +33,9 @@ export class AppComponent {
     Object.assign(this, { multiLine });
   }
 
-  onSelect(data): void {
+  onSelect(data, element): void {
     console.log('Item clicked', JSON.parse(JSON.stringify(data)));
+    console.log(element.style.backgroundColor);
   }
 
   onActivate(data): void {
@@ -119,5 +120,9 @@ export class AppComponent {
 
   onDeactivateLine(data): void {
     console.log('Deactivate', JSON.parse(JSON.stringify(data)));
+  }
+
+  getColor(elem) {
+    alert(elem.style.backgroundColor);
   }
 }
