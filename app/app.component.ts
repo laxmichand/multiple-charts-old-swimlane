@@ -38,10 +38,6 @@ export class AppComponent {
     console.log(element.style.backgroundColor);
   }
 
-  getColor(elem) {
-    alert(elem.style.backgroundColor);
-  }
-
   onActivate(data): void {
     console.log('Activate', JSON.parse(JSON.stringify(data)));
     this.name = JSON.parse(JSON.stringify(data)).value.name;
@@ -124,5 +120,9 @@ export class AppComponent {
 
   onDeactivateLine(data): void {
     console.log('Deactivate', JSON.parse(JSON.stringify(data)));
+  }
+
+  getColor(elem) {
+    alert(elem.style.backgroundColor);
   }
 }
