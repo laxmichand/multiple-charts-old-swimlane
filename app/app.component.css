@@ -21,6 +21,15 @@
   left: 14px;
   width: max-content;
 }
+.parent {
+  height: 200px;
+}
+.parent > div {
+  width: calc(100% / 2);
+  height: 100%;
+  float: left;
+}
+/* 
 ::ng-deep .ngx-charts .bar.active,
 .ngx-charts .bar:hover,
 .ngx-charts .cell.active,
@@ -31,7 +40,10 @@
 .ngx-charts .card:hover {
   opacity: 0.8;
   -webkit-transition: opacity 100ms ease-in-out !important;
-  /* transition: opacity 100ms ease-in-out !important;   */
+  transition: opacity 100ms ease-in-out !important;
   transform: scale(1.1) !important;
   transition: transform 0.2s !important;
+} */
+::ng-deep .ng-star-inserted:hover {
+  background-color: red;
 }

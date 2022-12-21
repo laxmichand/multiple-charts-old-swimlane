@@ -1,7 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { single } from './data';
+import { single, singleBar, multiBar } from './data';
 
 @Component({
   selector: 'my-app',
@@ -29,6 +29,7 @@ export class AppComponent {
   constructor() {
     this.getCalculate();
     Object.assign(this, { single });
+    Object.assign(this, { singleBar });
   }
 
   onSelect(data): void {
@@ -62,5 +63,28 @@ export class AppComponent {
     let t = single.map((s) => {
       return { ...s, value: Math.round(s.value * Number(this.value)) / 100 };
     });
+  }
+
+  singleBar: any[];
+  multiBar: any[];
+
+  viewBar: any[] = [600, 400];
+
+  // options
+  showXAxisBar = true;
+  showYAxisBar = true;
+  gradientBar = false;
+  showLegendBar = false;
+  showXAxisLabelBar = true;
+  // xAxisLabelBar = 'Country';
+  showYAxisLabelBar = true;
+  // yAxisLabelBar = 'Population';
+
+  colorSchemeBar = {
+    domain: ['#c9c9c9', '#58b4cd', '#9247b4', '#45ae94', '#fa631d'],
+  };
+
+  onSelectBar(event) {
+    console.log(event);
   }
 }
