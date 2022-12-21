@@ -22,7 +22,7 @@
   width: max-content;
 }
 .parent {
-  height: 200px;
+  /* height: 200px; */
 }
 .parent > div {
   width: calc(100% / 2);
