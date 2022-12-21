@@ -33,8 +33,13 @@ export class AppComponent {
     Object.assign(this, { multiLine });
   }
 
-  onSelect(data): void {
+  onSelect(data, element): void {
     console.log('Item clicked', JSON.parse(JSON.stringify(data)));
+    console.log(element.style.backgroundColor);
+  }
+
+  getColor(elem) {
+    alert(elem.style.backgroundColor);
   }
 
   onActivate(data): void {
