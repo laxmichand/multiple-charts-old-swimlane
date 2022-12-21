@@ -35,7 +35,6 @@ export class AppComponent {
 
   onSelect(data, element): void {
     console.log('Item clicked', JSON.parse(JSON.stringify(data)));
-    console.log(element.style.backgroundColor);
   }
 
   onActivate(data): void {
@@ -48,6 +47,7 @@ export class AppComponent {
   onDeactivate(data): void {
     this.name = 'Total Incidents';
     this.value = '107';
+    this.getCalculate();
     console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }
 

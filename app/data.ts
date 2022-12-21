@@ -2,22 +2,30 @@ export var single = [
   {
     name: 'Unspecified',
     value: 10,
+    index: 0,
   },
   {
     name: 'Vegetation Fire',
     value: 25,
+    index: 1,
   },
   {
     name: 'Training',
     value: 32,
+    index: 2,
   },
   {
     name: 'Vehicle Fire',
     value: 18,
+    index: 3,
   },
   {
     name: 'Structure Fire',
     value: 22,
+    index: 4,
+    extra: {
+      filter: 'G33',
+    },
   },
 ];
 
