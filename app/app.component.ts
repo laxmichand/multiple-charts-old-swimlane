@@ -14,7 +14,7 @@ export class AppComponent {
 
   // options
   gradient: boolean = true;
-  showLegend: boolean = false;
+  showLegend: boolean = true;
   showLabels: boolean = false;
   isDoughnut: boolean = true;
   legendPosition: string = 'below';

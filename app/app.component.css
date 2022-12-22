@@ -44,6 +44,6 @@
   transform: scale(1.1) !important;
   transition: transform 0.2s !important;
 } */
-::ng-deep .ng-star-inserted:hover {
+/* ::ng-deep .ng-star-inserted:hover {
   background-color: red;
-}
+} */

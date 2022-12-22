@@ -3,28 +3,64 @@ export var single = [
     name: 'Unspecified',
     value: 10,
     index: 0,
+    extra: {
+      filter: 'Unspecified',
+    },
   },
   {
     name: 'Vegetation Fire',
     value: 25,
     index: 1,
+    extra: {
+      filter: 'Vegetation',
+    },
   },
   {
     name: 'Training',
     value: 32,
     index: 2,
+    extra: {
+      filter: 'Training',
+    },
   },
   {
     name: 'Vehicle Fire',
     value: 18,
     index: 3,
+    extra: {
+      filter: 'Vehicle',
+    },
   },
   {
     name: 'Structure Fire',
     value: 22,
     index: 4,
     extra: {
-      filter: 'G33',
+      filter: 'Structure',
+    },
+  },
+  {
+    name: 'demo',
+    value: 43,
+    index: 5,
+    extra: {
+      filter: 'fire',
+    },
+  },
+  {
+    name: 'java script',
+    value: 50,
+    index: 5,
+    extra: {
+      filter: 'fire',
+    },
+  },
+  {
+    name: 'python',
+    value: 50,
+    index: 5,
+    extra: {
+      filter: 'fire',
     },
   },
 ];
