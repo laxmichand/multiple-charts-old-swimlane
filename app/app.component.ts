@@ -35,10 +35,26 @@ export class AppComponent {
 
   onSelect(data, element): void {
     console.log('Item clicked', JSON.parse(JSON.stringify(data)));
+
+    const defs = document
+      .querySelector('g[ng-reflect-color]')
+      .getAttribute('ng-reflect-color');
+    // let title = ;
+    // document.querySelectorAll('[stop]')
+    console.log(defs);
+    // console.log(title);
+
+    // defs.addEventListener('click', function onClick(event) {
+    //   console.log(event.target);
+
+    //   // 👇️ change background color
+    //   // 👇️ optionally change text color
+    //   // event.target.style.color = 'white';
+    // });
   }
 
   onActivate(data): void {
-    console.log('Activate', JSON.parse(JSON.stringify(data)));
+    // console.log('Activate', JSON.parse(JSON.stringify(data)));
     this.name = JSON.parse(JSON.stringify(data)).value.name;
     let temp = JSON.parse(JSON.stringify(data)).value.value;
     this.value = ((Number(this.value) * temp) / 100).toString() + `%`;
@@ -48,7 +64,7 @@ export class AppComponent {
     this.name = 'Total Incidents';
     this.value = '107';
     this.getCalculate();
-    console.log('Deactivate', JSON.parse(JSON.stringify(data)));
+    // console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }
 
   getCalculate() {
@@ -62,9 +78,21 @@ export class AppComponent {
         initialValue
       )
       .toString();
-    let t = single.map((s) => {
-      return { ...s, value: Math.round(s.value * Number(this.value)) / 100 };
+    let t = single.map((s, index) => {
+      if (index % 5 === 0) {
+        index = 0;
+      }
+      return {
+        ...s,
+        color: this.colorScheme.domain[index],
+        extra: {
+          color: this.colorScheme.domain[index],
+        },
+        value: Math.round(s.value * Number(this.value)) / 100,
+      };
     });
+    Object.assign(this, { t });
+    console.log(t);
   }
 
   singleBar: any[];

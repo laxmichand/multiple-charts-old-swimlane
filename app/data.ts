@@ -4,7 +4,7 @@ export var single = [
     value: 10,
     index: 0,
     extra: {
-      filter: 'Unspecified',
+      color: 'Unspecified',
     },
   },
   {
@@ -12,7 +12,7 @@ export var single = [
     value: 25,
     index: 1,
     extra: {
-      filter: 'Vegetation',
+      color: 'Vegetation',
     },
   },
   {
@@ -20,7 +20,7 @@ export var single = [
     value: 32,
     index: 2,
     extra: {
-      filter: 'Training',
+      color: 'Training',
     },
   },
   {
@@ -28,7 +28,7 @@ export var single = [
     value: 18,
     index: 3,
     extra: {
-      filter: 'Vehicle',
+      color: 'Vehicle',
     },
   },
   {
@@ -36,15 +36,15 @@ export var single = [
     value: 22,
     index: 4,
     extra: {
-      filter: 'Structure',
+      color: 'Structure',
     },
   },
   {
-    name: 'demo',
+    name: 'demo data',
     value: 43,
     index: 5,
     extra: {
-      filter: 'fire',
+      color: 'fire',
     },
   },
   {
@@ -52,7 +52,7 @@ export var single = [
     value: 50,
     index: 5,
     extra: {
-      filter: 'fire',
+      color: 'fire',
     },
   },
   {
@@ -60,7 +60,15 @@ export var single = [
     value: 50,
     index: 5,
     extra: {
-      filter: 'fire',
+      color: 'fire',
+    },
+  },
+  {
+    name: 'Structure',
+    value: 22,
+    index: 4,
+    extra: {
+      color: 'Structure',
     },
   },
 ];
